@@ -1,0 +1,19 @@
+<h1> Disaster Categories</h1>
+
+  <table>
+      <tr>
+        <th> Disasters </th>
+      </tr>
+
+
+      <% @categories.each do |category| %>
+        <tr>
+
+          <td class= "category-name"><td> <%= category.title %></td>
+          <td><%= link_to 'Show', category_path(category) %></td>
+
+          <td><img src = "<%= category.photo_url %>"/></td><br>
+
+          </tr>
+          <% end %>
+        </table>
